@@ -1,0 +1,28 @@
+function setup() {
+  // set up the square
+  createCanvas(400, 400);
+}
+  let x = 0;
+function draw() {
+  // gray background
+  background(220);
+
+  if (mouseIsPressed == true) {
+    fill("red");
+  } else {
+    fill("white");
+  }
+
+  circle(x, 200, 50);
+  x += 3;
+
+  if (x > width) {
+    x = 0;
+  }
+
+  text("x is ${x}", 20, 380);
+
+  if (mouseX < 100 && mouseX > 300) {
+    text("You're near the edge!", 20, 20);
+  }
+}
